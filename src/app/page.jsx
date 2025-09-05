@@ -3,8 +3,9 @@ import styles from "./page.module.css";
 import Header from "../components/header";
 
 const castles = [
-  { name: "Winterfell", href: "/castles/winterfell", x: 47, y: 22 },
-  { name: "Porto Real", href: "/castles/porto-real", x: 58, y: 60 },
+  { name: "Winterfell", x: 47, y: 22, emoji: "🐺" },
+  { name: "Porto Real", x: 58, y: 60, emoji: "👑" },
+  { name: "Ponta tempestade", x: 67, y: 68.6, emoji: "🦌" },
 ];
 
 export default function Home() {
@@ -14,11 +15,11 @@ export default function Home() {
         <section className={styles.mapSection}>
           <h2 className={styles.mapTitle}>Mapa de Westeros</h2>
           <div className={styles.mapContainer}>
-            <img src="/images/mapa-westeros.png" alt=""  className={styles.mapImage}/>
+            <img src="/images/mapa-westeros.png" alt="Mapa de Westeros"  className={styles.mapImage}/>
             {castles.map((castle) => (
             <a
               key={castle.name}
-              href={castle.href}
+              href={`/castles/${castle.name}`}
               className={styles.castleHotspot}
               style={{
                 left: `${castle.x}%`,
@@ -26,7 +27,7 @@ export default function Home() {
               }}
               title={castle.name}
             >
-              🏰
+              {castle.emoji}
             </a>
           ))}
           </div>
