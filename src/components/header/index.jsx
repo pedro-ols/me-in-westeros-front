@@ -21,23 +21,15 @@ export default function Header() {
                     <h1 className={styles.title}>Me in Westeros</h1>
                     <h2 className={styles.subtitle}>Uma viagem gelo e fogo</h2>
                 </div>
-                <navbar className={styles.navbar}>
+                <nav className={styles.navbar}>
                     {pages.map((page) => (
-                        page.id < pages.length ? (
                             <div key={page.name} className={styles.navItem}>
                                 <a key={page.name} href={page.href} className={styles.navLink}>
                                     {page.name}
                                 </a>
                             </div>
-                        ) : (
-                            <div key={page.name} style={{ border: "none" }} className={styles.navItem}>
-                                <a key={page.name} href={page.href} className={styles.navLink}>
-                                    {page.name}
-                                </a>
-                            </div>
-                        )
                     ))}
-                </navbar>
+                </nav>
             </header>
         </div>
     );
