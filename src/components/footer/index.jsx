@@ -7,7 +7,7 @@ export default function Footer() {
         <span className={styles.brand}>Me in Westeros</span>
         <nav className={styles.socialNav}>
           <a
-            href="https://github.com/pedro-ols/pedro-ols"
+            href="https://github.com/pedro-ols"
             target="_blank"
             className={styles.socialLink}
           >

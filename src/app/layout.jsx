@@ -1,17 +1,26 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Metamorphous } from "next/font/google";
 import "./globals.css";
 
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import localFont from "next/font/local";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const metamorphous = localFont({
+    src: [
+        {
+            path: "../../public/fonts/Metamorphous/Metamorphous-Regular.ttf",
+            weight: "400",
+            style: "normal",
+        },
+        // {
+        //     path: "/public/fonts/Metamorphous/Metamorphous-Regular.ttf",
+        //     weight: "700",
+        //     style: "normal",
+        // },
+    ],
+    variable: "--font-roboto",
+    display: "swap",
 });
 
 export const metadata = {
@@ -22,7 +31,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${metamorphous.variable}`}>
         <Header />
         {children}
         <Footer />
