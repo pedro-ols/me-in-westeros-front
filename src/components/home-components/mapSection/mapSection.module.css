@@ -1,12 +1,19 @@
 .mapSection {
     width: 100%;
     height: 45rem;
-    background-color: rgb(163, 147, 128);
+    background-color: var(--background-dark-sand);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
+.mapTitle{
+    font-size: 2.5rem;
+    color: var(--background-dark-brown);
+    margin-bottom: 1rem;
+    font-family: var(--font-metamorphous), serif;
+}
 .mapContainer {
     width: 30%;
     height: 80%;

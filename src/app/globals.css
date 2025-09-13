@@ -6,7 +6,11 @@
 }
 
 :root{
-  --background: #4B2E23;
+  --background-dark-brown: #4B2E23;
+  --background-sand: rgb(163, 147, 128);      
+  --background-dark-sand: rgb(130, 117, 102);  
+  --background-darker-sand: rgb(108, 98, 85);   
+  --background-deep-sand: rgb(86, 78, 68);  
   --text-color: #D9C9A3;
   --details-red: #8C1C13;
   --details-black: #1C1C1C;

@@ -13,13 +13,8 @@ const metamorphous = localFont({
             weight: "400",
             style: "normal",
         },
-        // {
-        //     path: "/public/fonts/Metamorphous/Metamorphous-Regular.ttf",
-        //     weight: "700",
-        //     style: "normal",
-        // },
     ],
-    variable: "--font-roboto",
+    variable: "--font-metamorphous",
     display: "swap",
 });
 
