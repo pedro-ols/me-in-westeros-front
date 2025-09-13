@@ -1,0 +1,147 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--background-darker-sand);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/images/winter-background.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.content {
+  background-color: var(--background-sand);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  max-width: 600px;
+  backdrop-filter: blur(10px);
+  border: 3px solid var(--details-black);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.iconSection {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dragonIcon {
+  font-size: 4rem;
+  animation: flicker 2s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.1); }
+}
+
+.errorCode {
+  font-size: 6rem;
+  font-weight: bold;
+  color: var(--details-black);
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+  font-family: var(--font-metamorphous), serif;
+  margin: 0;
+}
+
+.textSection {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: var(--background-dark-brown);
+  margin-bottom: 1rem;
+  font-family: var(--font-metamorphous), serif;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--background-dark-brown);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.suggestions {
+  margin-top: 2rem;
+}
+
+.suggestionsTitle {
+  font-size: 1.3rem;
+  color: var(--background-dark-brown);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-metamorphous), serif;
+}
+
+.linkGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.actionLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--background-darker-sand);
+  color: var(--background-dark-brown);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.actionLink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.linkIcon {
+  font-size: 1.5rem;
+}
+
+.quote {
+  margin-top: 3rem;
+  text-align: center;
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+}
+
+.quoteText {
+  font-size: 1.2rem;
+  color: var(--details-black);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-metamorphous), serif;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.quoteAuthor {
+  color: var(--details-black);
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
