@@ -1,0 +1,82 @@
+.heroSection {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  background-color: var(--background-sand);
+}
+
+.heroContent {
+  flex: 1;
+  max-width: 500px;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  color: var(--background-dark-brown);
+  margin-bottom: 1rem;
+  font-family: var(--font-metamorphous), serif;
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  color: var(--background-dark-brown);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  padding: 12px 24px;
+  background-color: var(--details-red);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.primaryButton:hover {
+  background-color: var(--details-red);
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  padding: 12px 24px;
+  border: 2px solid var(--background-dark-brown);
+  color: var(--background-dark-brown);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.secondaryButton:hover {
+  background-color: var(--text-color);
+  color: var(--background);
+}
+
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  border: 10px solid var(--details-grey);
+  border-radius: 15px;
+}
+
+.heroImg {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border-radius: 8px;
+}

@@ -1,0 +1,22 @@
+.quoteSection {
+  width: 100%;
+  padding: 4rem 5%;
+  background: linear-gradient(45deg, var(--details-red) 0%, var(--details-black) 100%);
+  text-align: center;
+}
+
+.quote {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  font-style: italic;
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin: 0 auto 1rem;
+  font-family: var(--font-metamorphous), serif;
+}
+
+.quoteAuthor {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
