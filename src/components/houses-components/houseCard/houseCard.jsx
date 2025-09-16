@@ -8,7 +8,7 @@ export default function HouseCard({ house }) {
             className={styles.houseCard} 
             key={house.id}
           >
-            <div className={styles.houseBanner}>
+            <div className={styles.houseBanner} style={{ backgroundImage: `url(${house.bannerUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className={styles.bannerOverlay}>
                 <Link href={`/houses/${house.id}`} className={styles.houseName}>House {house.name}</Link>
                 <p className={styles.houseAnthem}>"{house.anthem}"</p>

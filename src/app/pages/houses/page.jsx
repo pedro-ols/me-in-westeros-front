@@ -6,7 +6,7 @@ const houses = [
   {
     id: 1,
     name: 'Stark',
-    bannerUrl: '/banners/stark.png',
+    bannerUrl: 'https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/banners/banner_stark.png?raw=true',
     bannerAlt: 'A grey wolf on a white field',
     realm: 'The North',
     anthem: 'Winter is Coming',
