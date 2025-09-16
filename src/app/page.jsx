@@ -16,7 +16,7 @@ const events = [
   { title: "A Conquista de Aegon", description: "Aegon, o Conquistador, unifica os Sete Reinos com fogo e sangue", emoji: "⚔️" },
   { title: "A Rebelião de Robert", description: "O fim da dinastia Targaryen e início de uma nova era", emoji: "🐺" },
   { title: "O Retorno dos Dragões", description: "Daenerys desperta as criaturas mágicas após séculos", emoji: "🐉" },
-  { title: "Guerra dos Cinco Reis", description: "Após a morte de Robert Baratheon, os reinos entram em conflito com cinco candidatos ao trono de ferro", emoji: "🫅" },
+  { title: "Guerra dos Cinco Reis", description: "Após a morte de Robert Baratheon, os reinos entram em conflito com cinco candidatos ao trono de ferro", emoji: "👑" },
 ];
 
 export default function Home() {

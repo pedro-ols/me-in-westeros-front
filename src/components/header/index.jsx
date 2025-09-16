@@ -37,7 +37,7 @@ export default function Header() {
                 <nav className={styles.navbar}>
                     {pages.map((page) => (
                         <div key={page.name} className={styles.navItem}>
-                            <a href={page.href} className={styles.navLink}>
+                            <a href={`pages/${page.href}`} className={styles.navLink}>
                                 {page.name}
                             </a>
                         </div>
