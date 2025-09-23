@@ -1,6 +1,6 @@
 /* Card de cada Casa */
 .houseCard {
-  background: rgba(29, 3, 3, 0.9);
+  background: rgba(177, 166, 151, 0.95);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 
@@ -69,7 +69,7 @@ height: 30%;
 
 .detailLabel {
   font-size: 0.9rem;
-  color: var(--background-sand);
+  color: var(--background-dark-brown);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -77,27 +77,27 @@ height: 30%;
 
 .detailValue {
   font-size: 1rem;
-  color: var(--text-color);
+  color: var(--background-dark-brown);
   font-weight: 500;
 }
 
 .houseDescription {
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--text-color);
+  color: var(--background-dark-brown);
   margin-bottom: 2rem;
   font-style: italic;
   border-left: 3px solid var(--background-dark-brown);
   padding-left: 1rem;   
-  background: rgba(212, 175, 55, 0.05);
+  background: rgba(63, 51, 12, 0.3);
   padding: 1rem;
   border-radius: 5px;
 }
 
 /* Botão Saber Mais */
 .learnMoreBtn {
-  background: rgba(212, 175, 55, 0.05);
-  color: var(--text-color);
+  background: rgba(63, 51, 12, 0.3);
+  color: var(--background-dark-brown);
   border: none;
   padding: 0.8rem 2rem;
   border-radius: 8px;

@@ -9,6 +9,14 @@ const castles = [
   { name: "Winterfell", x: 47, y: 22, emoji: "🐺" },
   { name: "Porto Real", x: 58, y: 60, emoji: "👑" },
   { name: "Ponta tempestade", x: 67, y: 68.6, emoji: "🦌" },
+  { name: "Jardim de cima", x: 29, y: 80, emoji: "🌹" },
+  { name: "Ninho da Águia", x: 57, y: 48, emoji: "🦅" },
+  { name: "Lançassolar", x: 46, y: 83, emoji: "☀️" },
+  { name: "Correrrio", x: 38, y: 51.5, emoji: "🐟" },
+  { name: "As Gêmeas", x: 41, y: 41, emoji: "👯‍♀️" },
+  { name: "Pike", x: 25, y: 45, emoji: "🐙" },
+  { name: "Rochedo Casterly", x: 32, y: 59, emoji: "🦁" },
+  { name: "Pedra do Dragão", x: 70, y: 56, emoji: "🐉" },
 ];
 
 const events = [
