@@ -1,0 +1,429 @@
+/* Página dos Castelos - Estilo Medieval Épico baseado em houses.module.css */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--background-deep-sand) 0%, var(--background-dark-sand) 50%, var(--background-sand) 100%);
+  background-attachment: fixed;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(160, 82, 45, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Header da Página */
+.pageHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--background-dark-brown);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--details-red), transparent);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--background-dark-brown);
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid dos Castelos */
+.castlesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card de cada Castelo */
+.castleCard {
+  background: rgba(245, 245, 220, 0.95);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border: 3px solid var(--background-dark-brown);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.castleCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(139, 69, 19, 0.3);
+  border-color: var(--details-red);
+}
+
+/* Imagem do Castelo */
+.castleImage {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #8b4513, #654321);
+}
+
+.fortressImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.castleCard:hover .fortressImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.status.ativo {
+  background: #22c55e;
+}
+
+.status.parcialmente-destruído {
+  background: #f59e0b;
+}
+
+.status.ruínas-habitadas {
+  background: #ef4444;
+}
+
+.castleType {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Informações do Castelo */
+.castleInfo {
+  padding: 2rem 1.5rem;
+  color: var(--background-dark-brown);
+}
+
+.castleName {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--background-dark-brown);
+  text-align: center;
+}
+
+.castleDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(139, 69, 19, 0.1);
+  border-radius: 8px;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detailLabel {
+  font-size: 0.8rem;
+  color: var(--details-red);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detailValue {
+  font-size: 0.95rem;
+  color: var(--background-dark-brown);
+  font-weight: 600;
+}
+
+.castleDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  color: var(--background-dark-brown);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid var(--details-red);
+  padding-bottom: 0.3rem;
+}
+
+/* Seções específicas */
+.defensesSection,
+.locationsSection,
+.strategySection,
+.historySection {
+  margin-bottom: 1.5rem;
+}
+
+.defensesList,
+.historyList {
+  list-style: none;
+  padding: 0;
+}
+
+.defenseItem,
+.historyItem {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  color: #444;
+  position: relative;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.defenseItem:last-child,
+.historyItem:last-child {
+  border-bottom: none;
+}
+
+.defenseItem::before {
+  content: '🛡';
+  position: absolute;
+  left: 0;
+  font-size: 0.9rem;
+}
+
+.historyItem::before {
+  content: '📜';
+  position: absolute;
+  left: 0;
+  font-size: 0.9rem;
+}
+
+.locationsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.locationTag {
+  background: var(--background-dark-brown);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.locationTag:hover {
+  background: var(--details-red);
+  transform: translateY(-2px);
+}
+
+.strategyText {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+  font-style: italic;
+  padding: 1rem;
+  background: rgba(139, 69, 19, 0.1);
+  border-left: 4px solid var(--details-red);
+  border-radius: 5px;
+}
+
+/* Botão Explorar */
+.exploreBtn {
+  background: linear-gradient(135deg, var(--background-dark-brown) 0%, var(--details-red) 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.exploreBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.exploreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+}
+
+.exploreBtn:hover::before {
+  left: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .castlesGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .castleCard {
+    margin: 0;
+  }
+  
+  .pageHeader {
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .castleDetails {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  
+  .castleInfo {
+    padding: 1.5rem 1rem;
+  }
+  
+  .castleImage {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .castlesGrid {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .castleInfo {
+    padding: 1rem;
+  }
+  
+  .imageOverlay {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .castleName {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.castleCard {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.castleCard:nth-child(1) { animation-delay: 0.1s; }
+.castleCard:nth-child(2) { animation-delay: 0.2s; }
+.castleCard:nth-child(3) { animation-delay: 0.3s; }
+.castleCard:nth-child(4) { animation-delay: 0.4s; }
+.castleCard:nth-child(5) { animation-delay: 0.5s; }
+.castleCard:nth-child(6) { animation-delay: 0.6s; }
+
+/* Efeitos especiais para castelos específicos */
+.castleCard:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(139, 69, 19, 0.1) 50%, transparent 70%);
+  opacity: 0.6;
+  pointer-events: none;
+  border-radius: 15px;
+}

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from './houses.module.css'
 import HouseCard from '@/components/houses-components/houseCard/houseCard'
 

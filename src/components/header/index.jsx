@@ -1,12 +1,15 @@
 "use client";
-import styles from "./header.module.css";
+
+import Link from "next/link";
 import { useState } from 'react';
 
+import styles from "./header.module.css";
+
 const pages = [
-    { id: 1, name: "Livros", href: "/books" },
-    { id: 2, name: "Personagens", href: "/characters" },
-    { id: 3, name: "Casas", href: "/houses" },
-    { id: 4, name: "Castelos", href: "/castles" },
+    { id: 1, name: "Livros", href: "/pages/books" },
+    { id: 2, name: "Personagens", href: "/pages/characters" },
+    { id: 3, name: "Casas", href: "/pages/houses" },
+    { id: 4, name: "Castelos", href: "/pages/castles" },
 ];
 
 export default function Header() {
@@ -37,9 +40,9 @@ export default function Header() {
                 <nav className={styles.navbar}>
                     {pages.map((page) => (
                         <div key={page.name} className={styles.navItem}>
-                            <a href={`pages/${page.href}`} className={styles.navLink}>
+                            <Link href={page.href} className={styles.navLink}>
                                 {page.name}
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </nav>

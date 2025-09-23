@@ -22,7 +22,7 @@ export default function NotFound() {
             <div className={styles.linkGrid}>
               <Link href="/" className={styles.actionLink}>
                 <span className={styles.linkIcon}>🏠</span>
-                Voltar para Casa
+                Voltar para Home
               </Link>
               <Link href="/characters" className={styles.actionLink}>
                 <span className={styles.linkIcon}>⚔️</span>

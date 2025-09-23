@@ -1,0 +1,420 @@
+/* Página dos Personagens - Estilo Medieval Épico baseado em houses.module.css */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--background-deep-sand) 0%, var(--background-dark-sand) 50%, var(--background-sand) 100%);
+  background-attachment: fixed;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(160, 82, 45, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Header da Página */
+.pageHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--background-dark-brown);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--details-red), transparent);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--background-dark-brown);
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid dos Personagens */
+.charactersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card de cada Personagem */
+.characterCard {
+  background: rgba(245, 245, 220, 0.95);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border: 3px solid var(--background-dark-brown);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.characterCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(139, 69, 19, 0.3);
+  border-color: var(--details-red);
+}
+
+/* Imagem do Personagem */
+.characterImage {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #8b4513, #654321);
+}
+
+.portraitImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.characterCard:hover .portraitImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.status.vivo {
+  background: #22c55e;
+}
+
+.status.morto {
+  background: #ef4444;
+}
+
+.location {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Informações do Personagem */
+.characterInfo {
+  padding: 2rem 1.5rem;
+  color: var(--background-dark-brown);
+}
+
+.characterName {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: var(--background-dark-brown);
+}
+
+.realName {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.characterTitle {
+  font-size: 1rem;
+  color: var(--details-red);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.characterDetails {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(139, 69, 19, 0.1);
+  border-radius: 8px;
+}
+
+.detailItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.detailItem:last-child {
+  margin-bottom: 0;
+}
+
+.detailLabel {
+  font-size: 0.9rem;
+  color: var(--details-red);
+  font-weight: 600;
+}
+
+.detailValue {
+  font-size: 0.9rem;
+  color: var(--background-dark-brown);
+  font-weight: 500;
+  text-align: right;
+  max-width: 60%;
+}
+
+.characterDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  color: var(--background-dark-brown);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+/* Seções específicas */
+.characteristicsSection,
+.weaponsSection,
+.alliesSection,
+.achievementsSection {
+  margin-bottom: 1.5rem;
+}
+
+.characteristicsList,
+.alliesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.characteristicTag,
+.allyTag {
+  background: var(--background-dark-brown);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.characteristicTag:hover,
+.allyTag:hover {
+  background: var(--details-red);
+  transform: translateY(-2px);
+}
+
+.weaponsList,
+.achievementsList {
+  list-style: none;
+  padding: 0;
+}
+
+.weaponItem,
+.achievementItem {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  color: #444;
+  position: relative;
+  border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.weaponItem:last-child,
+.achievementItem:last-child {
+  border-bottom: none;
+}
+
+.weaponItem::before {
+  content: '⚔';
+  position: absolute;
+  left: 0;
+  color: var(--details-red);
+  font-size: 0.9rem;
+}
+
+.achievementItem::before {
+  content: '🏆';
+  position: absolute;
+  left: 0;
+  font-size: 0.9rem;
+}
+
+/* Botão Saber Mais */
+.learnMoreBtn {
+  background: linear-gradient(135deg, var(--background-dark-brown) 0%, var(--details-red) 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.learnMoreBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.learnMoreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+}
+
+.learnMoreBtn:hover::before {
+  left: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .charactersGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .characterCard {
+    margin: 0;
+  }
+  
+  .pageHeader {
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .characterInfo {
+    padding: 1.5rem 1rem;
+  }
+  
+  .characterImage {
+    height: 200px;
+  }
+  
+  .detailValue {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .charactersGrid {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .characterInfo {
+    padding: 1rem;
+  }
+  
+  .imageOverlay {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .detailItem {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  
+  .detailValue {
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.characterCard {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.characterCard:nth-child(1) { animation-delay: 0.1s; }
+.characterCard:nth-child(2) { animation-delay: 0.2s; }
+.characterCard:nth-child(3) { animation-delay: 0.3s; }
+.characterCard:nth-child(4) { animation-delay: 0.4s; }
+.characterCard:nth-child(5) { animation-delay: 0.5s; }
+.characterCard:nth-child(6) { animation-delay: 0.6s; }
