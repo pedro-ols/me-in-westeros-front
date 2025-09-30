@@ -48,13 +48,10 @@
 
 /* Grid das Casas */
 .housesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   gap: 2.5rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 /* Responsividade */
@@ -144,7 +141,6 @@
 .houseCard:nth-child(3) { animation-delay: 0.3s; }
 .houseCard:nth-child(4) { animation-delay: 0.4s; }
 
-/* Efeito de brilho nas bordas */
 .houseCard::after {
   content: '';
   position: absolute;

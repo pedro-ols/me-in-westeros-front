@@ -1,156 +1,527 @@
-import styles from './characters.module.css'
+import styles from "./characters.module.css";
+import CharacterCard from "@/components/characters-components/characterCard";
 
 const characters = [
   {
     id: 1,
-    name: 'Jon Snow',
-    title: 'Lorde Comandante da Patrulha da Noite / Rei no Norte',
-    house: 'Stark (bastardo) / Targaryen (verdadeiro)',
-    realName: 'Aegon Targaryen',
-    imageUrl: '/characters/jon-snow.jpg',
-    status: 'Vivo',
-    location: 'Winterfell',
-    description: 'Bastardo de Ned Stark que se revelou ser o filho legítimo de Lyanna Stark e Rhaegar Targaryen. Conhecido por sua honra, coragem e liderança.',
-    characteristics: [
-      'Honorável como um Stark',
-      'Sangue de dragão Targaryen', 
-      'Líder nato',
-      'Espadachim habilidoso'
+    name: "Eddard (Ned) Stark",
+    atributes: [
+      {
+        name: "Força",
+        value: 16,
+      },
+      {
+        name: "Inteligência",
+        value: 15,
+      },
+      {
+        name: "Carisma",
+        value: 8,
+      },
+      {
+        name: "Lealdade",
+        value: 20,
+      },
+      {
+        name: "Coragem",
+        value: 17,
+      },
+      {
+        name: "Influência",
+        value: 18,
+      },
+      {
+        name: "Loucura",
+        value: 2,
+      },
     ],
-    weapons: ['Longclaw (Garra Longa)', 'Adaga de Aço Valiriano'],
-    allies: ['Samwell Tarly', 'Tormund Giantsbane', 'Fantasma (Lobo Gigante)'],
-    achievements: [
-      'Defendeu a Muralha contra os Selvagens',
-      'Venceu a Batalha dos Bastardos',
-      'Liderou a defesa contra os Mortos-Vivos'
-    ]
+    imageUrl:
+      "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/characters/eddard_stark.png?raw=true",
+    titles: [
+      {
+        name: "Senhor de Winterfell",
+      },
+      {
+        name: "Protetor do Norte",
+      },
+    ],
+    houseId: 1,
+    createdAt: "2025-09-30T16:13:36.803Z",
+    updatedAt: "2025-09-30T16:13:36.803Z",
   },
   {
     id: 2,
-    name: 'Daenerys Targaryen',
-    title: 'Mãe dos Dragões / Rainha de Meereen',
-    house: 'Targaryen',
-    realName: 'Daenerys Stormborn',
-    imageUrl: '/characters/daenerys.jpg',
-    status: 'Morta',
-    location: 'King\'s Landing (falecida)',
-    description: 'A última Targaryen conhecida, renasceu os dragões e conquistou cidades como libertadora de escravos antes de sucumbir à loucura dos Targaryen.',
-    characteristics: [
-      'Imune ao fogo',
-      'Mãe dos Dragões',
-      'Libertadora de escravos',
-      'Tendência à tirania'
+    name: "Catelyn Stark",
+    atributes: [
+      {
+        name: "Força",
+        value: 6,
+      },
+      {
+        name: "Inteligência",
+        value: 8,
+      },
+      {
+        name: "Carisma",
+        value: 13,
+      },
+      {
+        name: "Lealdade",
+        value: 17,
+      },
+      {
+        name: "Coragem",
+        value: 17,
+      },
+      {
+        name: "Influência",
+        value: 11,
+      },
+      {
+        name: "Loucura",
+        value: 3,
+      },
     ],
-    weapons: ['Dragões (Drogon, Rhaegal, Viserion)', 'Exército Imaculado'],
-    allies: ['Tyrion Lannister', 'Jorah Mormont', 'Missandei'],
-    achievements: [
-      'Renasceu os dragões',
-      'Libertou Slaver\'s Bay',
-      'Conquistou Westeros',
-      'Destruiu King\'s Landing'
-    ]
+    imageUrl:
+      "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/characters/catelyn_stark.png?raw=true",
+    titles: [
+      {
+        name: "Senhora de Winterfell",
+      },
+    ],
+    houseId: 1,
+    createdAt: "2025-09-30T16:13:36.819Z",
+    updatedAt: "2025-09-30T16:13:36.819Z",
   },
   {
     id: 3,
-    name: 'Tyrion Lannister',
-    title: 'Mão da Rainha / O Anão',
-    house: 'Lannister',
-    realName: 'Tyrion Lannister',
-    imageUrl: '/characters/tyrion.jpg',
-    status: 'Vivo',
-    location: 'King\'s Landing',
-    description: 'O filho anão de Tywin Lannister, compensou sua deficiência física com uma mente brilhante e wit afiado. Talvez o melhor jogador do jogo dos tronos.',
-    characteristics: [
-      'Inteligência excepcional',
-      'Estrategista político',
-      'Amante de livros e vinho',
-      'Senso de justiça'
+    name: "Robb Stark",
+    atributes: [
+      {
+        name: "Força",
+        value: 16,
+      },
+      {
+        name: "Inteligência",
+        value: 15,
+      },
+      {
+        name: "Carisma",
+        value: 13,
+      },
+      {
+        name: "Lealdade",
+        value: 18,
+      },
+      {
+        name: "Coragem",
+        value: 17,
+      },
+      {
+        name: "Influência",
+        value: 14,
+      },
+      {
+        name: "Loucura",
+        value: 3,
+      },
     ],
-    weapons: ['Intelecto', 'Eloquência', 'Conhecimento'],
-    allies: ['Jon Snow', 'Daenerys Targaryen', 'Varys'],
-    achievements: [
-      'Defendeu King\'s Landing na Batalha de Blackwater',
-      'Serviu como Mão competente',
-      'Sobreviveu a múltiplas traições',
-      'Arquitetou a vitória contra Cersei'
-    ]
+    imageUrl:
+      "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/characters/robb_stark.png?raw=true",
+    titles: [
+      {
+        name: "Herdeiro de Winterfell",
+      },
+      {
+        name: "Rei do Norte",
+      },
+      {
+        name: "O Jovem Lobo",
+      },
+    ],
+    houseId: 1,
+    createdAt: "2025-09-30T16:13:36.822Z",
+    updatedAt: "2025-09-30T16:13:36.822Z",
   },
   {
     id: 4,
-    name: 'Arya Stark',
-    title: 'Sem Rosto / A Menina de Ninguém',
-    house: 'Stark',
-    realName: 'Arya Stark',
-    imageUrl: '/characters/arya.jpg',
-    status: 'Viva',
-    location: 'Oeste de Westeros (explorando)',
-    description: 'A filha mais nova de Ned Stark que se tornou uma assassina mortal. Vingou sua família e salvou Westeros ao matar o Rei da Noite.',
-    characteristics: [
-      'Assassina treinada',
-      'Mudança de faces',
-      'Determinação férrea',
-      'Senso de justiça familiar'
+    name: "Jon Snow",
+    atributes: [
+      {
+        name: "Força",
+        value: 14,
+      },
+      {
+        name: "Inteligência",
+        value: 9,
+      },
+      {
+        name: "Carisma",
+        value: 16,
+      },
+      {
+        name: "Lealdade",
+        value: 16,
+      },
+      {
+        name: "Coragem",
+        value: 18,
+      },
+      {
+        name: "Influência",
+        value: 14,
+      },
+      {
+        name: "Loucura",
+        value: 2,
+      },
     ],
-    weapons: ['Needle (Agulha)', 'Adaga de Aço Valiriano', 'Técnicas dos Sem Rosto'],
-    allies: ['The Hound', 'Gendry', 'Hot Pie'],
-    achievements: [
-      'Matou o Rei da Noite',
-      'Vingou o Casamento Vermelho',
-      'Dominou as artes dos Sem Rosto',
-      'Sobreviveu sozinha em Westeros'
-    ]
+    imageUrl:
+      "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/characters/jon_snow.png?raw=true",
+    titles: [
+      {
+        name: "Lorde Snow",
+      },
+      {
+        name: "O bastardo de Ned Stark",
+      },
+      {
+        name: "Senhor Comandante da Patrula da Noite",
+      },
+      {
+        name: "Rei do Norte",
+      },
+    ],
+    houseId: 1,
+    createdAt: "2025-09-30T16:13:36.824Z",
+    updatedAt: "2025-09-30T16:13:36.824Z",
   },
   {
     id: 5,
-    name: 'Sansa Stark',
-    title: 'Rainha no Norte / Senhora de Winterfell',
-    house: 'Stark',
-    realName: 'Sansa Stark',
-    imageUrl: '/characters/sansa.jpg',
-    status: 'Viva',
-    location: 'Winterfell',
-    description: 'Transformou-se de uma jovem ingênua em uma líder astuta e política experiente. Governa o Norte independente com sabedoria e força.',
-    characteristics: [
-      'Política habilidosa',
-      'Líder natural',
-      'Sobrevivente resiliente',
-      'Protetora do Norte'
+    name: "Arya Stark",
+    atributes: [
+      {
+        name: "Força",
+        value: 6,
+      },
+      {
+        name: "Inteligência",
+        value: 15,
+      },
+      {
+        name: "Carisma",
+        value: 10,
+      },
+      {
+        name: "Lealdade",
+        value: 10,
+      },
+      {
+        name: "Coragem",
+        value: 16,
+      },
+      {
+        name: "Influência",
+        value: 4,
+      },
+      {
+        name: "Loucura",
+        value: 5,
+      },
     ],
-    weapons: ['Diplomacia', 'Estratégia política', 'Alianças'],
-    allies: ['Jon Snow', 'Arya Stark', 'Brienne of Tarth'],
-    achievements: [
-      'Sobreviveu aos Lannister e Bolton',
-      'Conquistou a independência do Norte',
-      'Tornou-se Rainha no Norte',
-      'Reconstruiu Winterfell'
-    ]
+    imageUrl:
+      "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/characters/arya_stark.png?raw=true",
+    titles: [
+      {
+        name: "Princesa de Winterfell",
+      },
+      {
+        name: "Garota sem-rosto",
+      },
+    ],
+    houseId: 1,
+    createdAt: "2025-09-30T16:13:36.826Z",
+    updatedAt: "2025-09-30T16:13:36.826Z",
   },
   {
     id: 6,
-    name: 'Jaime Lannister',
-    title: 'Ser Jaime / O Regicida',
-    house: 'Lannister',
-    realName: 'Jaime Lannister',
-    imageUrl: '/characters/jaime.jpg',
-    status: 'Morto',
-    location: 'King\'s Landing (falecido)',
-    description: 'O cavaleiro dourado que matou o Rei Louco. Passou por uma jornada de redenção antes de retornar para morrer com sua irmã gêmea Cersei.',
-    characteristics: [
-      'Espadachim lendário',
-      'Amante de Cersei',
-      'Jornada de redenção',
-      'Honra conflituosa'
+    name: "Bran Stark",
+    atributes: [
+      {
+        name: "Força",
+        value: 2,
+      },
+      {
+        name: "Inteligência",
+        value: 13,
+      },
+      {
+        name: "Carisma",
+        value: 17,
+      },
+      {
+        name: "Lealdade",
+        value: 15,
+      },
+      {
+        name: "Coragem",
+        value: 13,
+      },
+      {
+        name: "Influência",
+        value: 5,
+      },
+      {
+        name: "Loucura",
+        value: 2,
+      },
     ],
-    weapons: ['Espada (perdeu mão direita)', 'Mão de ouro', 'Experiência militar'],
-    allies: ['Brienne of Tarth', 'Tyrion Lannister', 'Bronn'],
-    achievements: [
-      'Salvou King\'s Landing do fogo valiriano',
-      'Protegeu Brienne',
-      'Lutou contra os Mortos-Vivos',
-      'Cavaleiro da Guarda Real por anos'
-    ]
-  }
-]
+    imageUrl:
+      "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/characters/bran_stark.png?raw=true",
+    titles: [
+      {
+        name: "Bran, o quebrado",
+      },
+      {
+        name: "Príncipe de Winterfell",
+      },
+      {
+        name: "O Corvo de Três Olhos",
+      },
+    ],
+    houseId: 1,
+    createdAt: "2025-09-30T16:13:36.831Z",
+    updatedAt: "2025-09-30T16:13:36.831Z",
+  },
+  {
+    id: 7,
+    name: "Sansa Stark",
+    atributes: [
+      {
+        name: "Força",
+        value: 4,
+      },
+      {
+        name: "Inteligência",
+        value: 11,
+      },
+      {
+        name: "Carisma",
+        value: 19,
+      },
+      {
+        name: "Lealdade",
+        value: 15,
+      },
+      {
+        name: "Coragem",
+        value: 10,
+      },
+      {
+        name: "Influência",
+        value: 5,
+      },
+      {
+        name: "Loucura",
+        value: 3,
+      },
+    ],
+    imageUrl:
+      "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/characters/sansa_stark.png?raw=true",
+    titles: [
+      {
+        name: "Princesa de Winterfell",
+      },
+      {
+        name: "Rainha do Norte",
+      },
+    ],
+    houseId: 1,
+    createdAt: "2025-09-30T16:13:36.834Z",
+    updatedAt: "2025-09-30T16:13:36.834Z",
+  },
+  {
+    id: 8,
+    name: "Rickon Stark",
+    atributes: [
+      {
+        name: "Força",
+        value: 2,
+      },
+      {
+        name: "Inteligência",
+        value: 13,
+      },
+      {
+        name: "Carisma",
+        value: 17,
+      },
+      {
+        name: "Lealdade",
+        value: 15,
+      },
+      {
+        name: "Coragem",
+        value: 17,
+      },
+      {
+        name: "Influência",
+        value: 5,
+      },
+      {
+        name: "Loucura",
+        value: 0,
+      },
+    ],
+    imageUrl:
+      "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/characters/rickon_stark.png?raw=true",
+    titles: [
+      {
+        name: "O Último Stark",
+      },
+    ],
+    houseId: 1,
+    createdAt: "2025-09-30T16:13:36.835Z",
+    updatedAt: "2025-09-30T16:13:36.835Z",
+  },
+  {
+    id: 9,
+    name: "Tywin Lannister",
+    atributes: [
+      {
+        name: "Força",
+        value: 12,
+      },
+      {
+        name: "Inteligência",
+        value: 18,
+      },
+      {
+        name: "Carisma",
+        value: 10,
+      },
+      {
+        name: "Lealdade",
+        value: 8,
+      },
+      {
+        name: "Coragem",
+        value: 13,
+      },
+      {
+        name: "Influência",
+        value: 20,
+      },
+      {
+        name: "Loucura",
+        value: 1,
+      },
+    ],
+    imageUrl:
+      "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/characters/tywin_lannister.png?raw=true",
+    titles: [
+      {
+        name: "Lorde de Rochedo Casterly",
+      },
+      {
+        name: "Mão do Rei",
+      },
+    ],
+    houseId: 2,
+    createdAt: "2025-09-30T16:13:36.837Z",
+    updatedAt: "2025-09-30T16:13:36.837Z",
+  },
+  {
+    id: 10,
+    name: "Tyrion Lannister",
+    atributes: [
+      {
+        name: "Força",
+        value: 6,
+      },
+      {
+        name: "Inteligência",
+        value: 20,
+      },
+      {
+        name: "Carisma",
+        value: 5,
+      },
+      {
+        name: "Lealdade",
+        value: 17,
+      },
+      {
+        name: "Coragem",
+        value: 14,
+      },
+      {
+        name: "Influência",
+        value: 16,
+      },
+      {
+        name: "Loucura",
+        value: 8,
+      },
+    ],
+    imageUrl:
+      "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/characters/tyrion_lannister.png?raw=true",
+    titles: [
+      {
+        name: "O duende",
+      },
+      {
+        name: "Mão do Rei",
+      },
+    ],
+    houseId: 2,
+    createdAt: "2025-09-30T16:13:36.840Z",
+    updatedAt: "2025-09-30T16:13:36.840Z",
+  },
+];
+
+const houses = [
+  {
+    id: 1,
+    name: "Stark",
+    bannerUrl:
+      "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/banners/banner_stark.png?raw=true",
+    bannerAlt: "A grey wolf on a white field",
+    realm: "The North",
+    anthem: "Winter is Coming",
+    history:
+      "A Casa Stark é uma das mais antigas e nobres de Westeros, governando o Norte a partir de Winterfell.",
+    castle: {
+      name: "Winterfell",
+    },
+  },
+  {
+    id: 2,
+    name: "Lannister",
+    bannerUrl: "/banners/lannister.png",
+    bannerAlt: "A golden lion on a crimson field",
+    realm: "The Westerlands",
+    anthem: "Hear Me Roar",
+    history:
+      "Os Lannister são conhecidos por sua riqueza e poder, controlando as minas de ouro de Casterly Rock.",
+    castle: {
+      name: "Casterly Rock",
+    },
+  },
+  {
+    id: 3,
+    name: "Targaryen",
+    bannerUrl: "/banners/targaryen.png",
+    bannerAlt: "A three-headed dragon on a black field",
+    realm: "Dragonstone",
+    anthem: "Fire and Blood",
+    history:
+      "A antiga casa real de Westeros, conhecida por seus dragões e cabelos prateados.",
+    castle: {
+      name: "Dragonstone",
+    },
+  },
+];
 
 export default function Characters() {
   return (
@@ -158,95 +529,20 @@ export default function Characters() {
       <header className={styles.pageHeader}>
         <h1 className={styles.title}>Personagens de Westeros</h1>
         <p className={styles.subtitle}>
-          Os heróis, vilões e sobreviventes que moldaram o destino dos Sete Reinos
+          Os heróis, vilões e sobreviventes que moldaram o destino dos Sete
+          Reinos
         </p>
       </header>
 
       <section className={styles.charactersGrid}>
-        {characters.map(character => (
-          <article 
-            className={styles.characterCard} 
+        {characters.map((character) => (
+          <CharacterCard
             key={character.id}
-          >
-            <div className={styles.characterImage}>
-              <img 
-                src={character.imageUrl} 
-                alt={character.name}
-                className={styles.portraitImage}
-              />
-              <div className={styles.imageOverlay}>
-                <span className={`${styles.status} ${styles[character.status.toLowerCase()]}`}>
-                  {character.status}
-                </span>
-                <span className={styles.location}>{character.location}</span>
-              </div>
-            </div>
-            
-            <div className={styles.characterInfo}>
-              <h2 className={styles.characterName}>{character.name}</h2>
-              {character.realName !== character.name && (
-                <p className={styles.realName}>({character.realName})</p>
-              )}
-              <p className={styles.characterTitle}>{character.title}</p>
-              
-              <div className={styles.characterDetails}>
-                <div className={styles.detailItem}>
-                  <span className={styles.detailLabel}>Casa:</span>
-                  <span className={styles.detailValue}>{character.house}</span>
-                </div>
-              </div>
-              
-              <p className={styles.characterDescription}>{character.description}</p>
-              
-              <div className={styles.characteristicsSection}>
-                <h4 className={styles.sectionTitle}>Características:</h4>
-                <div className={styles.characteristicsList}>
-                  {character.characteristics.map((trait, index) => (
-                    <span key={index} className={styles.characteristicTag}>
-                      {trait}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              <div className={styles.weaponsSection}>
-                <h4 className={styles.sectionTitle}>Armas/Ferramentas:</h4>
-                <ul className={styles.weaponsList}>
-                  {character.weapons.map((weapon, index) => (
-                    <li key={index} className={styles.weaponItem}>{weapon}</li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div className={styles.alliesSection}>
-                <h4 className={styles.sectionTitle}>Aliados Principais:</h4>
-                <div className={styles.alliesList}>
-                  {character.allies.map((ally, index) => (
-                    <span key={index} className={styles.allyTag}>
-                      {ally}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              <div className={styles.achievementsSection}>
-                <h4 className={styles.sectionTitle}>Grandes Feitos:</h4>
-                <ul className={styles.achievementsList}>
-                  {character.achievements.map((achievement, index) => (
-                    <li key={index} className={styles.achievementItem}>
-                      {achievement}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <button className={styles.learnMoreBtn}>
-                Ver História Completa
-              </button>
-            </div>
-          </article>
+            character={character}
+            houses={houses}
+          />
         ))}
       </section>
     </main>
-  )
+  );
 }

@@ -1,5 +1,6 @@
 /* Card de cada Casa */
 .houseCard {
+  width: 30%;
   background: rgba(177, 166, 151, 0.95);
   border-radius: 15px;
   overflow: hidden;
@@ -8,7 +9,6 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   border: 3px solid var(--background-dark-brown);
   transition: all 0.3s ease;
-  position: relative;
 }
 
 
