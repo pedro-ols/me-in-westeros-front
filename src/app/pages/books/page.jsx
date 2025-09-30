@@ -1,93 +1,78 @@
 import styles from './books.module.css'
+import BookCard from '@/components/books-components/bookCard'
 
 const books = [
-  {
-    id: 1,
-    title: 'A Game of Thrones',
-    originalTitle: 'A Song of Ice and Fire: Book One',
-    author: 'George R.R. Martin',
-    publishYear: 1996,
-    pages: 694,
-    coverUrl: '/covers/game-of-thrones.jpg',
-    description: 'O primeiro livro da saga épica que introduz o mundo de Westeros. Seguimos as casas nobres em sua luta pelo Trono de Ferro, enquanto uma antiga ameaça desperta no Norte.',
-    mainCharacters: ['Eddard Stark', 'Jon Snow', 'Daenerys Targaryen', 'Tyrion Lannister'],
-    themes: ['Poder e Política', 'Honra vs Pragmatismo', 'Guerra e Consequências'],
-    rating: 4.8,
-    status: 'Publicado'
-  },
-  {
-    id: 2,
-    title: 'A Clash of Kings',
-    originalTitle: 'A Song of Ice and Fire: Book Two',
-    author: 'George R.R. Martin',
-    publishYear: 1998,
-    pages: 761,
-    coverUrl: '/covers/clash-of-kings.jpg',
-    description: 'Com a morte do Rei Robert, cinco reis reivindicam o trono. Enquanto o reino se despedaça em guerra civil, dragões renascem no Oriente e a Muralha enfrenta novas ameaças.',
-    mainCharacters: ['Tyrion Lannister', 'Arya Stark', 'Jon Snow', 'Daenerys Targaryen'],
-    themes: ['Guerra Civil', 'Magia Retornando', 'Lealdade e Traição'],
-    rating: 4.7,
-    status: 'Publicado'
-  },
-  {
-    id: 3,
-    title: 'A Storm of Swords',
-    originalTitle: 'A Song of Ice and Fire: Book Three',
-    author: 'George R.R. Martin',
-    publishYear: 2000,
-    pages: 973,
-    coverUrl: '/covers/storm-of-swords.jpg',
-    description: 'O mais brutal dos livros. Casamentos vermelhos, mortes chocantes e reviravoltas que mudam para sempre o destino de Westeros. Considerado o melhor livro da série.',
-    mainCharacters: ['Jon Snow', 'Arya Stark', 'Jaime Lannister', 'Sansa Stark'],
-    themes: ['Vingança', 'Redenção', 'Consequências da Guerra'],
-    rating: 4.9,
-    status: 'Publicado'
-  },
-  {
-    id: 4,
-    title: 'A Feast for Crows',
-    originalTitle: 'A Song of Ice and Fire: Book Four',
-    author: 'George R.R. Martin',
-    publishYear: 2005,
-    pages: 753,
-    coverUrl: '/covers/feast-for-crows.jpg',
-    description: 'Com os reis mortos, novos jogadores emergem. O foco se volta para a reconstrução e as consequências da guerra, explorando personagens secundários e novas ameaças.',
-    mainCharacters: ['Cersei Lannister', 'Arya Stark', 'Sansa Stark', 'Samwell Tarly'],
-    themes: ['Reconstrução', 'Poder Feminino', 'Consequências'],
-    rating: 4.3,
-    status: 'Publicado'
-  },
-  {
-    id: 5,
-    title: 'A Dance with Dragons',
-    originalTitle: 'A Song of Ice and Fire: Book Five',
-    author: 'George R.R. Martin',
-    publishYear: 2011,
-    pages: 1016,
-    coverUrl: '/covers/dance-with-dragons.jpg',
-    description: 'Acontece paralelamente ao livro anterior. Daenerys governa Meereen, Jon comanda a Patrulha da Noite, e Tyrion jornada pelo Oriente. O inverno finalmente chega.',
-    mainCharacters: ['Jon Snow', 'Daenerys Targaryen', 'Tyrion Lannister', 'Stannis Baratheon'],
-    themes: ['Liderança', 'Sacrifício', 'O Inverno que Vem'],
-    rating: 4.4,
-    status: 'Publicado'
-  },
-  {
-    id: 6,
-    title: 'The Winds of Winter',
-    originalTitle: 'A Song of Ice and Fire: Book Six',
-    author: 'George R.R. Martin',
-    publishYear: 'TBA',
-    pages: '~1500 (estimado)',
-    coverUrl: '/covers/winds-of-winter.jpg',
-    description: 'O aguardado sexto livro da saga. Promete resolver muitas tramas pendentes e levar a história ao seu clímax, com o inverno finalmente estabelecido em Westeros.',
-    mainCharacters: ['Jon Snow', 'Daenerys Targaryen', 'Tyrion Lannister', 'Arya Stark'],
-    themes: ['Inverno', 'Apocalipse', 'Destino'],
-    rating: 'N/A',
-    status: 'Em Desenvolvimento'
-  }
-]
+    {
+      "id": 5,
+      "title": "A dança dos dragões",
+      "volume": 5,
+      "releaseYear": 2011,
+      "coverUrl": "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/covers/a_dance_with_dragons.png?raw=true",
+      "coverAlt": "Capa do livro A Dança dos Dragões - Um pedinte fazendo uma súplica a uma rainha em um salão real.",
+      "synopsis": "É outono em Westeros, e a Guerra dos Cinco Reis parece finalmente entrar na reta final. Stannis Baratheon se instala no Norte e jura conquistar o apoio dos senhores da região para continuar sua luta pelo trono, embora seja atrapalhado pela invasão de homens de ferro em grande parte da costa. Na Muralha, Jon Snow é eleito o 998º Senhor Comandante da Patrulha da Noite, mas inimigos o cercam de todos os lados, tanto na Patrulha quanto para além da Muralha. Enquanto isso, Tyrion Lannister atravessa o Mar Estreito rumo a Pentos, sem objetivos definidos, sem aliados e cada vez mais sem opções. Na Baía dos Escravos, Daenerys Targaryen conquista a cidade de Meereen e decide ficar e governá-la, praticando as habilidades de liderança que serão tão necessárias quando partir para Westeros. No entanto, sua presença já foi notada por muitos senhores nos Sete Reinos, e das Ilhas de Ferro e de Dorne, de Vilavelha e das Cidades Livres, emissários estão a caminho, querendo se unir à sua causa e, se possível, usá-la para os próprios fins. Em todos os cantos conflitos ganham vida e traições vêm daqueles mais próximos. Guerreiros, selvagens, nobres e escravos – todos têm pela frente um longo inverno, enquanto destino, ambição e política ditam o ritmo da dança mais perigosa de todas.",
+      "rating": 4.8,
+      "pages": 832,
+      "createdAt": "2025-09-30T16:13:37.646Z",
+      "updatedAt": "2025-09-30T16:13:37.646Z"
+    },
+    {
+      "id": 1,
+      "title": "Guerra dos tronos",
+      "volume": 1,
+      "releaseYear": 1996,
+      "coverUrl": "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/covers/a_game_of_thrones.png?raw=true",
+      "coverAlt": "Capa do livro Guerra dos Tronos - Dois homens na muralha de gelo contemplando o que há além dela.",
+      "synopsis": "O verão pode durar décadas. O inverno, toda uma vida. E a guerra dos tronos começou. Como Guardião do Norte, lorde Eddard Stark não fica feliz quando o rei Robert o proclama a nova Mão do Rei. Sua honra o obriga a aceitar o cargo e deixar seu posto em Winterfell para rumar para a corte, onde os homens fazem o que lhes convém, não o que devem... e onde um inimigo morto é algo a ser admirado. Longe de casa e com a família dividida, Eddard se vê cada vez mais enredado nas intrigas mortais de Porto Real, sem saber que perigos ainda maiores espreitam a distância. Nas florestas ao norte de Winterfell, forças sobrenaturais se espalham por trás da Muralha que protege a região. E, nas Cidades Livres, o jovem Rei Dragão exilado na Rebelião de Robert planeja sua vingança e deseja recuperar sua herança de família: o Trono de Ferro de Westeros.",
+      "rating": 4.8,
+      "pages": 592,
+      "createdAt": "2025-09-30T16:13:37.644Z",
+      "updatedAt": "2025-09-30T16:13:37.644Z"
+    },
+    {
+      "id": 3,
+      "title": "Tormenta de espadas",
+      "volume": 3,
+      "releaseYear": 2000,
+      "coverUrl": "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/covers/a_storm_of_swords.png?raw=true",
+      "coverAlt": "Capa do livro Tormenta de Espadas - Uma legião de cavaleiros com estandartes coloridos chegando em um castelo com duas torres idênticas.",
+      "synopsis": "O futuro de Westeros está em jogo, e ninguém descansará até que os Sete Reinos tenham explodido em uma verdadeira tormenta de espadas. Dos cinco pretendentes ao trono, um está morto e outro caiu em desgraça, e ainda assim a guerra continua em toda sua fúria, enquanto alianças são feitas e desfeitas. Joffrey, da Casa Lannister, ocupa o Trono de Ferro, como o instável governante dos Sete Reinos, ao passo que seu rival mais amargo, lorde Stannis, jaz derrotado e enfeitiçado pelas promessas da Mulher Vermelha. O jovem Robb, da Casa Stark, ainda comanda o Norte, contudo, e planeja sua batalha contra os Lannister, mesmo que sua irmã seja refém deles em Porto Real. Enquanto isso, Daenerys Targaryen atravessa um continente deixando um rastro de sangue a caminho de Westeros, levando consigo os três únicos dragões existentes em todo o mundo. Enquanto forças opostas avançam para uma gigantesca batalha final, um exército de selvagens chega dos confins da civilização. Em seu rastro vem uma horda de terríveis criaturas místicas – os Outros: um batalhão de mortos-vivos cujos corpos são imparáveis.",
+      "rating": 4.9,
+      "pages": 832,
+      "createdAt": "2025-09-30T16:13:37.645Z",
+      "updatedAt": "2025-09-30T16:13:37.645Z"
+    },
+    {
+      "id": 2,
+      "title": "Fúria dos reis",
+      "volume": 2,
+      "releaseYear": 1998,
+      "coverUrl": "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/covers/a_clash_of_kings.png?raw=true",
+      "coverAlt": "Capa do livro Fúria dos Reis - Uma mulher vermelha queimando estátuas em uma fortaleza",
+      "synopsis": "Um cometa da cor de fogo e sangue corta os céus. E, da antiga cidadela de Pedra do Dragão às costas áridas de Winterfell, reina o caos. Em A fúria dos reis , seis facções disputam o controle de uma terra dividida e o direito de ocupar o Trono de Ferro de Westeros – e estão dispostos a encarar tempestades, levantes e guerras para isso. Nesta história, irmão trama contra irmão e os mortos se levantam para caminhar pela noite. Aqui, uma princesa se disfarça de menino órfão, um cavaleiro se prepara para encarar uma pérfida feiticeira e bárbaros descem das Montanhas da Lua para saquear os campos. Em",
+      "rating": 4.9,
+      "pages": 648,
+      "createdAt": "2025-09-30T16:13:37.644Z",
+      "updatedAt": "2025-09-30T16:13:37.644Z"
+    },
+    {
+      "id": 4,
+      "title": "O festim dos corvos",
+      "volume": 4,
+      "releaseYear": 2005,
+      "coverUrl": "https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/covers/a_feast_for_crows.png?raw=true",
+      "coverAlt": "Capa do livro O Festim dos Corvos - Um navio chegando em uma cidade feita de ilhas",
+      "synopsis": "Há séculos os sete grandes reinos de Westeros se enfrentam em amargas disputas, batalhas e traições. Agora, com Joffrey Baratheon e Robb Stark fora da jogada e lordes insignificantes competindo pelas Ilhas de Ferro, a guerra que devorou o continente parece ter finalmente chegado ao fim. No entanto, como após todo grande conflito, não demora para que os sobreviventes, os bandidos, os renegados e os carniceiros avancem para disputar o espólio dos mortos. Por toda Westeros os lordes se agitam, formando alianças e fazendo planos, enquanto nomes conhecidos e desconhecidos se apresentam para tomar parte das danças políticas. Todos precisam lançar mão de suas habilidades e poderes para encarar os tempos de terror que se aproximam. Nobres e plebeus, soldados e feiticeiros, assassinos e saqueadores devem arriscar suas fortunas... e suas vidas, pois em um festim de corvos, muitos são os convidados ― e poucos os sobreviventes.",
+      "rating": 4.8,
+      "pages": 608,
+      "createdAt": "2025-09-30T16:13:37.645Z",
+      "updatedAt": "2025-09-30T16:13:37.645Z"
+    }
+  ];
 
 export default function Books() {
+
+  const sortedBooks = books.sort((a, b) => a.volume - b.volume);
+
   return (
     <main className={styles.container}>
       <header className={styles.pageHeader}>
@@ -98,78 +83,8 @@ export default function Books() {
       </header>
 
       <section className={styles.booksGrid}>
-        {books.map(book => (
-          <article 
-            className={styles.bookCard} 
-            key={book.id}
-          >
-            <div className={styles.bookCover}>
-              <img 
-                src={book.coverUrl} 
-                alt={`Capa de ${book.title}`}
-                className={styles.coverImage}
-              />
-              <div className={styles.coverOverlay}>
-                <span className={styles.bookStatus}>{book.status}</span>
-                {book.rating !== 'N/A' && (
-                  <div className={styles.rating}>
-                    <span className={styles.stars}>★★★★★</span>
-                    <span className={styles.ratingValue}>{book.rating}</span>
-                  </div>
-                )}
-              </div>
-            </div>
-            
-            <div className={styles.bookInfo}>
-              <h2 className={styles.bookTitle}>{book.title}</h2>
-              <p className={styles.originalTitle}>{book.originalTitle}</p>
-              
-              <div className={styles.bookDetails}>
-                <div className={styles.detailItem}>
-                  <span className={styles.detailLabel}>Autor:</span>
-                  <span className={styles.detailValue}>{book.author}</span>
-                </div>
-                
-                <div className={styles.detailItem}>
-                  <span className={styles.detailLabel}>Ano:</span>
-                  <span className={styles.detailValue}>{book.publishYear}</span>
-                </div>
-                
-                <div className={styles.detailItem}>
-                  <span className={styles.detailLabel}>Páginas:</span>
-                  <span className={styles.detailValue}>{book.pages}</span>
-                </div>
-              </div>
-              
-              <p className={styles.bookDescription}>{book.description}</p>
-              
-              <div className={styles.charactersSection}>
-                <h4 className={styles.sectionTitle}>Personagens Principais:</h4>
-                <div className={styles.charactersList}>
-                  {book.mainCharacters.map((character, index) => (
-                    <span key={index} className={styles.characterTag}>
-                      {character}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              <div className={styles.themesSection}>
-                <h4 className={styles.sectionTitle}>Temas:</h4>
-                <div className={styles.themesList}>
-                  {book.themes.map((theme, index) => (
-                    <span key={index} className={styles.themeTag}>
-                      {theme}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              
-              <button className={styles.readMoreBtn}>
-                {book.status === 'Em Desenvolvimento' ? 'Acompanhar Lançamento' : 'Saber Mais'}
-              </button>
-            </div>
-          </article>
+        {sortedBooks.map(book => (
+          <BookCard book={book} key={book.id} />
         ))}
       </section>
     </main>

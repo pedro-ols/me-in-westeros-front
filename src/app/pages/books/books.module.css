@@ -60,13 +60,10 @@
 
 /* Grid dos Livros */
 .booksGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   gap: 2.5rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 /* Card de cada Livro */

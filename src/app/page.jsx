@@ -36,7 +36,6 @@ export default function Home() {
 
       <TimelineSection events={events} />
 
-      {/* Quote Section */}
       <QuoteSection/>
     </main>
   );

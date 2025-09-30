@@ -1,0 +1,119 @@
+/* Card de cada Casa */
+.bookCard {
+  width: 30%;
+  background: rgba(177, 166, 151, 0.95);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border: 3px solid var(--background-dark-brown);
+  transition: all 0.3s ease;
+}
+
+
+/* Banner da Casa */
+.bookBanner {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+    align-items: flex-end;
+}
+
+.bannerOverlay {
+height: 20%;
+  background: linear-gradient(90deg, black, transparent);
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+.bookName {
+  font-size: 1.8rem;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.bookName:hover {
+  text-decoration: underline;
+}
+
+.bookAnthem {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-color);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Informações da Casa */
+.bookInfo {
+  padding: 2rem 1.5rem;
+  color: #e0e0e0;
+}
+
+.bookDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detailLabel {
+  font-size: 0.9rem;
+  color: var(--background-dark-brown);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detailValue {
+  font-size: 1rem;
+  color: var(--background-dark-brown);
+  font-weight: 500;
+}
+
+.bookDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--background-dark-brown);
+  margin-bottom: 2rem;
+  font-style: italic;
+  border-left: 3px solid var(--background-dark-brown);
+  padding-left: 1rem;   
+  background: rgba(63, 51, 12, 0.3);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Botão Saber Mais */
+.learnMoreBtn {
+  background: rgba(63, 51, 12, 0.3);
+  color: var(--background-dark-brown);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.learnMoreBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
