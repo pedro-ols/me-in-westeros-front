@@ -11,7 +11,7 @@ export default function BookCard({ book }) {
           >
             <div className={styles.bookBanner} style={{ backgroundImage: `url(${book.coverUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className={styles.bannerOverlay}>
-                <Link href={`/books/${book.id}`} className={styles.bookName}>{book.title}</Link>
+                <Link href={`/pages/books/${book.volume}`} className={styles.bookName}>{book.title}</Link>
                 <p className={styles.bookAnthem}>Vol. {book.volume}</p>
               </div>
             </div>
