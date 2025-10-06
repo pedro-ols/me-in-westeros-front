@@ -1,46 +1,42 @@
+"use client"
+
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+
 import styles from './houses.module.css'
 import HouseCard from '@/components/houses-components/houseCard/houseCard'
 
-const houses = [
-  {
-    id: 1,
-    name: 'Stark',
-    bannerUrl: 'https://github.com/pedro-ols/me-in-westeros-front/blob/main/public/images/banners/banner_stark.png?raw=true',
-    bannerAlt: 'A grey wolf on a white field',
-    realm: 'The North',
-    anthem: 'Winter is Coming',
-    history: 'A Casa Stark é uma das mais antigas e nobres de Westeros, governando o Norte a partir de Winterfell.',
-    castle:{
-        name: 'Winterfell',
-    }
-  },
-  {
-    id: 2,
-    name: 'Lannister',
-    bannerUrl: '/banners/lannister.png',
-    bannerAlt: 'A golden lion on a crimson field',
-    realm: 'The Westerlands',
-    anthem: 'Hear Me Roar',
-    history: 'Os Lannister são conhecidos por sua riqueza e poder, controlando as minas de ouro de Casterly Rock.',
-    castle:{
-        name: 'Casterly Rock',
-    }
-  },
-  {
-    id: 3,
-    name: 'Targaryen',
-    bannerUrl: '/banners/targaryen.png',
-    bannerAlt: 'A three-headed dragon on a black field',
-    realm: 'Dragonstone',
-    anthem: 'Fire and Blood',
-    history: 'A antiga casa real de Westeros, conhecida por seus dragões e cabelos prateados.',
-    castle:{
-        name: 'Dragonstone',
-    }
-  }
-]
-
 export default function Houses() {
+  const url = 'http://localhost:4000/me-in-westeros/houses'
+
+  const [houses, setHouses] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const fetchHouses = async () => {
+      try {
+        setLoading(true)
+        const response = await axios.get(url)
+        setHouses(response.data.houses)
+        setLoading(false)
+      }
+      catch (error) {
+        console.log('Erro ao buscar as casas na API')
+        console.error(error)
+        setError('Não foi possível carregar as casas.')
+        setLoading(false)
+      }
+    }
+    fetchHouses()
+  }, [])
+
+  if (loading) {
+    return <div className={styles.loading}>Carregando as Casas Nobres...</div>
+  }
+  if (error) {
+    return <div className={styles.error}>{error}</div>
+  }
   return (
     <main className={styles.container}>
       <header className={styles.pageHeader}>
