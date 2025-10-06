@@ -24,15 +24,15 @@ export default function NotFound() {
                 <span className={styles.linkIcon}>🏠</span>
                 Voltar para Home
               </Link>
-              <Link href="/characters" className={styles.actionLink}>
+              <Link href="/pages/characters" className={styles.actionLink}>
                 <span className={styles.linkIcon}>⚔️</span>
                 Personagens
               </Link>
-              <Link href="/houses" className={styles.actionLink}>
+              <Link href="/pages/houses" className={styles.actionLink}>
                 <span className={styles.linkIcon}>🏰</span>
                 Casas Nobres
               </Link>
-              <Link href="/castles" className={styles.actionLink}>
+              <Link href="/paegs/castles" className={styles.actionLink}>
                 <span className={styles.linkIcon}>🏯</span>
                 Castelos
               </Link>
