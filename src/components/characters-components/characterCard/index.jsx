@@ -16,7 +16,7 @@ export default function CharacterCard({ character, houses }) {
       >
         <div className={styles.bannerOverlay}>
           <Link
-            href={`/characters/${character.id}`}
+            href={`/pages/characters/${character.id}`}
             className={styles.characterName}
           >
             {character.name}

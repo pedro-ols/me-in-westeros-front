@@ -1,0 +1,263 @@
+/* Character Page Styles */
+.container {
+  min-height: 100vh;
+  background: var(--background-dark-sand);
+  color: #e6d7c3;
+  padding: 2rem;
+}
+
+.characterLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+/* Lado Esquerdo - Perfil */
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profileSection {
+  background: var(--background-sand);
+  border: 2px solid var(--background-dark-brown);
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.characterImageContainer {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  border-radius: 10%;
+  overflow: hidden;
+  border: 3px solid var(--background-dark-brown);
+  box-shadow: 0 0 20px rgba(198, 156, 109, 0.3);
+}
+
+.characterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.characterName {
+  font-size: 2.5rem;
+  color: var(--background-dark-brown);
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+.titlesSection {
+  margin-top: 1.5rem;
+}
+
+.titlesLabel {
+  font-size: 1.3rem;
+  color: var(--details-black);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.titlesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.titleItem {
+  background: rgba(63, 51, 12, 0.3);
+  color: var(--details-black);
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+/* Seção do Ator */
+.actorSection {
+  background: var(--background-sand);
+  border: 2px solid var(--background-dark-brown);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.actorLabel {
+  font-size: 1.3rem;
+  color: var(--background-dark-brown);
+  margin-bottom: 1rem;
+}
+
+.actorInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.actorImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+  overflow: hidden;
+  border: 2px solid var(--background-dark-brown);
+}
+
+.actorImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.actorName {
+  font-size: 1.2rem;
+  color: var(--details-black);
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Lado Direito - Atributos */
+.rightSection {
+  background: var(--background-sand);
+  border: 2px solid var(--background-dark-brown);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.attributesTitle {
+  font-size: 2rem;
+  color: var(--background-dark-brown);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.attributesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.attributeItem {
+  background: rgba(63, 51, 12, 0.3);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(198, 156, 109, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.attributeItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 2px 10px rgba(198, 156, 109, 0.2);
+}
+
+.attributeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.attributeName {
+  font-size: 1.2rem;
+  color: var(--details-black);
+  font-weight: bold;
+}
+
+.attributeValue {
+  font-size: 1.3rem;
+  color: var(--details-black);
+  font-weight: bold;
+  min-width: 30px;
+  text-align: right;
+}
+
+.attributeBar {
+  height: 12px;
+  background: rgba(139, 69, 19, 0.3);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(198, 156, 109, 0.2);
+}
+
+.attributeFill {
+  height: 100%;
+  background: linear-gradient(90deg, #8b4513 0%, #c69c6d 50%, #daa520 100%);
+  border-radius: 6px;
+  transition: width 0.8s ease;
+  box-shadow: 0 0 8px rgba(198, 156, 109, 0.4);
+}
+
+/* Estados de carregamento e erro */
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 1.5rem;
+  color: #c69c6d;
+  text-align: center;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .characterLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .characterName {
+    font-size: 2rem;
+  }
+
+  .characterImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .attributesTitle {
+    font-size: 1.5rem;
+  }
+
+  .profileSection,
+  .actorSection,
+  .rightSection {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .characterName {
+    font-size: 1.8rem;
+  }
+
+  .characterImage {
+    width: 120px;
+    height: 120px;
+  }
+
+  .attributeName,
+  .attributeValue {
+    font-size: 1rem;
+  }
+}
