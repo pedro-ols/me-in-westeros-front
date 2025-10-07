@@ -63,6 +63,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 2.5rem;
 }
@@ -328,9 +329,8 @@
   }
   
   .castlesGrid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
   }
   
   .castleCard {
