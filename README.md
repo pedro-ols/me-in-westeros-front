@@ -107,46 +107,6 @@ A aplicação estará disponível em: **http://localhost:3000**
 
 ---
 
-## 🔧 Scripts Disponíveis
-
-```bash
-npm run dev          # Inicia o servidor de desenvolvimento
-npm run build        # Cria build de produção
-npm run start        # Inicia o servidor de produção
-npm run lint         # Executa o linter
-npm run lint:fix     # Corrige problemas do linter automaticamente
-```
-
----
-
-## 🤝 Contribuição
-
-Contribuições são sempre bem-vindas! Para contribuir:
-
-1. **Fork** o projeto
-2. Crie uma **branch** para sua feature (`git checkout -b feature/AmazingFeature`)
-3. **Commit** suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um **Pull Request**
-
-### 📋 **Diretrizes de Contribuição**
-- Siga os padrões de código existentes
-- Adicione testes quando necessário
-- Atualize a documentação
-- Descreva claramente suas mudanças
-
----
-
-## 🐛 Reportar Bugs
-
-Encontrou um bug? Abra uma [issue](link-para-issues) com:
-- Descrição clara do problema
-- Passos para reproduzir
-- Screenshots (se aplicável)
-- Ambiente (SO, navegador, versão do Node.js)
-
----
-
 ## 📜 Licença
 
 Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
