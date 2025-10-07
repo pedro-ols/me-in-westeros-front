@@ -15,7 +15,7 @@ export default function MapSection({ castles }) {
           {castles.map((castle) => (
             <a
               key={castle.name}
-              href={`/castles/${castle.id}`}
+              href={`/pages/castles/${castle.id}`}
               className={styles.castleHotspot}
               style={{
                 left: `${castle.x}%`,
