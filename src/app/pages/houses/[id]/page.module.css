@@ -1,0 +1,198 @@
+/* House Page Styles */
+.container {
+  min-height: 100vh;
+  background: var(--background-dark-sand);
+  color: var(--background-dark-brown);
+  font-family: 'Metamorphous', serif;
+}
+
+/* Banner Section */
+.bannerSection {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.houseBanner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerOverlay {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.houseName {
+  font-size: 4rem;
+  color: #c69c6d;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Slogan Section */
+.sloganSection {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+
+.houseSlogan {
+  font-size: 2rem;
+  color: var(--background-dark-brown);
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* History Section */
+.historySection {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.historyTitle {
+  font-size: 2.5rem;
+  color: var(--background-dark-brown);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.houseHistory {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #e6d7c3;
+  text-align: justify;
+  background: rgba(60, 55, 37, 0.3);
+  padding: 2.5rem;
+  border-radius: 15px;
+  margin: 0;
+}
+
+/* Characters Section */
+.charactersSection {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.charactersTitle {
+  font-size: 2.5rem;
+  color: var(--background-dark-brown);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.charactersGrid{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Estados de carregamento e erro */
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  font-size: 1.5rem;
+  color: var(--background-dark-brown);
+  text-align: center;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .houseName {
+    font-size: 2.5rem;
+  }
+
+  .houseSlogan {
+    font-size: 1.5rem;
+  }
+
+  .historyTitle,
+  .charactersTitle {
+    font-size: 2rem;
+  }
+
+  .houseHistory {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .bannerSection {
+    height: 40vh;
+  }
+
+  .charactersGrid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .houseName {
+    font-size: 2rem;
+  }
+
+  .houseSlogan {
+    font-size: 1.3rem;
+  }
+
+  .historyTitle,
+  .charactersTitle {
+    font-size: 1.8rem;
+  }
+
+  .houseHistory {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .historySection,
+  .charactersSection {
+    padding: 0 1rem 2rem;
+  }
+
+  .sloganSection {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .charactersGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

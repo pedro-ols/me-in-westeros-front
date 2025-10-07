@@ -14,7 +14,7 @@ export default function HouseCard({ house }) {
         }}
       >
         <div className={styles.bannerOverlay}>
-          <Link href={`/houses/${house.name}`} className={styles.houseName}>
+          <Link href={`/pages/houses/${house.id}`} className={styles.houseName}>
             Casa {house.name}
           </Link>
           <p className={styles.houseAnthem}>"{house.slogan}"</p>
