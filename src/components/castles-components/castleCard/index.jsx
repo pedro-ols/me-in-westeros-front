@@ -16,7 +16,7 @@ export default function CastleCard({ castle, houses }) {
       >
         <div className={styles.bannerOverlay}>
           <Link
-            href={`castles/${castle.id}`}
+            href={`/pages/castles/${castle.id}`}
             className={styles.castleName}
           >
             {castle.name}
