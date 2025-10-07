@@ -7,35 +7,45 @@ import styles from "./page.module.css";
 import { useParams } from "next/navigation";
 
 export default function CharacterPage() {
-  const url = "http://localhost:4000/me-in-westeros/characters";
+  const charactersUrl = "http://localhost:4000/me-in-westeros/characters";
+  const actorsUrl = "http://localhost:4000/me-in-westeros/actors";
   const params = useParams();
 
   const [characters, setCharacters] = useState([]);
+  const [actors, setActors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchCharacters = async () => {
+    const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(url);
-        setCharacters(response.data.characters);
+        
+        // Buscar personagens e atores em paralelo
+        const [charactersResponse, actorsResponse] = await Promise.all([
+          axios.get(charactersUrl),
+          axios.get(actorsUrl)
+        ]);
+        
+        setCharacters(charactersResponse.data.characters);
+        setActors(actorsResponse.data.actors);
         setLoading(false);
       } catch (error) {
-        console.log("Erro ao buscar personagens na API");
+        console.log("Erro ao buscar dados da API");
         console.error(error);
-        setError("Não foi possível carregar os personagens.");
+        setError("Não foi possível carregar os dados.");
         setLoading(false);
       }
     };
-    fetchCharacters();
+    fetchData();
   }, []);
 
   const id = parseInt(params.id);
   const character = characters.find((c) => c.id === id);
+   const actor = actors.find((a) => a.characterId === id);
 
   if (loading) {
-    return <div className={styles.loading}>Carregando os personagens...</div>;
+    return <div className={styles.loading}>Carregando personagem e ator...</div>;
   }
   if (error) {
     return <div className={styles.error}>{error}</div>;
@@ -53,7 +63,7 @@ export default function CharacterPage() {
           {/* Seção do Personagem */}
           <div className={styles.profileSection}>
             <div className={styles.characterImageContainer}>
-              <img src={character.imageUrl} alt={character.name} styles={styles.characterImage}/>
+              <img src={character.imageUrl} alt={character.name} className={styles.characterImage}/>
             </div>
             <h1 className={styles.characterName}>{character.name}</h1>
             {character.titles && character.titles.length > 0 && (
@@ -75,9 +85,15 @@ export default function CharacterPage() {
             <h3 className={styles.actorLabel}>Interpretado por:</h3>
             <div className={styles.actorInfo}>
               <div className={styles.actorImage}>
-                <img src="/images/actors/placeholder-actor.jpg" alt="Ator" />
+                {actor ? (
+                  <img src={actor.imageUrl} alt={actor.name} />
+                ) : (
+                  <img src="/images/actors/placeholder-actor.jpg" alt="Ator não encontrado" />
+                )}
               </div>
-              <p className={styles.actorName}>Sean Bean</p>
+              <p className={styles.actorName}>
+                {actor ? actor.name : "Ator não encontrado"}
+              </p>
             </div>
           </div>
         </div>

@@ -126,6 +126,20 @@
   font-weight: bold;
 }
 
+.actorBirthDate {
+  font-size: 0.9rem;
+  color: var(--background-dark-brown);
+  margin: 0;
+  font-style: italic;
+}
+
+.actorNationality {
+  font-size: 0.9rem;
+  color: var(--background-dark-brown);
+  margin: 0;
+  font-weight: 500;
+}
+
 /* Lado Direito - Atributos */
 .rightSection {
   background: var(--background-sand);
