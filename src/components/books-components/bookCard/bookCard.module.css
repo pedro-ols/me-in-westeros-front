@@ -1,6 +1,7 @@
 /* Card de cada Casa */
 .bookCard {
   width: 30%;
+  height: 57rem;
   background: rgba(177, 166, 151, 0.95);
   border-radius: 15px;
   overflow: hidden;
@@ -115,4 +116,14 @@ height: 20%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s ease;
+}
+
+@media screen and (max-width: 799px) {
+  .bookCard {
+    width: 90%;
+  }
+}@media (min-width: 800px) and (max-width: 1100px) {
+  .bookCard {
+    width: 40%;
+  }
 }
